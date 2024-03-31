@@ -1,0 +1,103 @@
+/* Estilos para el formulario */
+.DatosParqueadero {
+    display: flex;
+    justify-content: center;
+    height: 100vh;
+    color: #0f0f0f;
+  }
+  
+  .form1 {
+    width: 100%;
+    max-width: 800px;
+   color: #131212;
+    padding: 40px;
+    border-radius: 10px;
+    
+  }
+  
+  .form-header1 {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+  }
+  
+  .title h2 {
+    margin: 0;
+    color: #333;
+  }
+  
+  .login-button button {
+    background-color: #6c63ff;
+    color: #131212;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+  } 
+  
+  
+  .input-group {
+    display: flex;
+    flex-wrap: wrap;
+    margin-bottom: 20px;
+  }
+  
+  .column {
+    flex: 1 1 33%; /* Distribuir las columnas en tres partes iguales */
+    margin-right: 20px;
+  }
+  
+  .column:last-child {
+    margin-right: 0;
+  }
+  
+  .input-box {
+    margin-bottom: 20px;
+  }
+  
+  .input-box label {
+    display: block;
+    margin-bottom: 5px;
+  }
+  
+  .input-box input,
+  .input-box textarea {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    color:#0f0f0f;
+    box-sizing: border-box;
+  }
+  
+  .continue-button {
+    margin-top: 20px;
+  }
+  
+  .continue-button button {
+    background-color: #6c63ff;
+    color: #0f0f0f;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+  }
+  
+  .continue-button button:hover {
+    background-color: #5650e0;
+  }
+  
+
+
+  @media screen and (max-width: 768px) {
+    .form1 {
+      padding: 20px;
+    }
+  
+    .column {
+      flex: 1 1 100%; /* Cambiar el ancho de las columnas a 100% */
+      margin-right: 0;
+      margin-bottom: 20px; /* Agregar espacio inferior entre las columnas */
+    }
+  }
