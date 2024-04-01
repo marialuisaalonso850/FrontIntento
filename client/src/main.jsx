@@ -1,6 +1,6 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import { BrowserRouter as Router } from 'react-router-dom';
+import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import { createBrowserRouter } from 'react-router-dom';
 import './index.css';
 import Login from '../src/routes/Login';
@@ -34,7 +34,6 @@ const router = createBrowserRouter([
     path: "/",
     element: <Home />
   },
-
   {
     path: "/perfil",
     element: <Perfil />
@@ -87,11 +86,12 @@ const App = () => (
   <React.StrictMode>
     <AuthProvider>
       <Router>
-        <RouterProvider router={router} />
+        <Routes>{router}</Routes>
       </Router>
     </AuthProvider>
   </React.StrictMode>
 );
 
 ReactDOM.render(<App />, document.getElementById('root'));
+
 
