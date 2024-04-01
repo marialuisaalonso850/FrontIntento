@@ -92,6 +92,6 @@ const router = createBrowserRouter([
       </AuthProvider>
     </React.StrictMode>
   );
-}
+
 
 ReactDOM.createRoot(document.getElementById('root')).render(<App />);
