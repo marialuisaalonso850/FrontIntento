@@ -1,13 +1,13 @@
-import React, { useEffect, useState } from 'react';
-import ReactDOM from 'react-dom/client';
-import { RouterProvider } from 'react-router-dom';
+import React from 'react';
+import ReactDOM from 'react-dom';
+import { BrowserRouter as Router } from 'react-router-dom';
 import { createBrowserRouter } from 'react-router-dom';
 import './index.css';
 import Login from '../src/routes/Login';
 import Signup from '../src/routes/signup';
 import Dashboard from '../src/routes/dashboard';
 import ProtectedRoute from '../src/routes/protectedRaute';
-import { AuthProvider, useAuth } from '../src/Autenticacion/AutProvider';
+import { AuthProvider } from '../src/Autenticacion/AutProvider';
 import Home from '../src/components/Home';
 import Perfil from '../src/routes/perfil';
 import ContactUs from '../src/routes/contactUs';
@@ -83,15 +83,15 @@ const router = createBrowserRouter([
   },
 ]);
 
-
-
-  return (
-    <React.StrictMode>
-      <AuthProvider>
+const App = () => (
+  <React.StrictMode>
+    <AuthProvider>
+      <Router>
         <RouterProvider router={router} />
-      </AuthProvider>
-    </React.StrictMode>
-  );
+      </Router>
+    </AuthProvider>
+  </React.StrictMode>
+);
 
+ReactDOM.render(<App />, document.getElementById('root'));
 
-ReactDOM.createRoot(document.getElementById('root')).render(<App />);
