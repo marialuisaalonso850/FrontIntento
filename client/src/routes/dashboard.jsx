@@ -52,11 +52,6 @@ const Dashboard = () => {
     return parqueadero.title.toLowerCase().includes(searchTerm.toLowerCase());
   });
 
-  if (auth.esAutentico) {
-    console.log("autenticacion "+ auth.esAutentico);
-    
-    return <Navigate to="/dashboard" />;
-  }
   
 
   return (
