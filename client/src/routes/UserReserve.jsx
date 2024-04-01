@@ -23,7 +23,7 @@ const UserReseve = () => {
       try {
         const response = await fetch(`${puestos.apiUrl}`, {
           headers: {
-            Authorization: Bearer  `${auth.getAccessToken()}`
+            Authorization: `Bearer  ${auth.getAccessToken()}`
           }
         });
         if (response.ok) {
@@ -101,9 +101,9 @@ const UserReseve = () => {
     }).then(async (result) => {
       if (result.isConfirmed) {
         try {
-          await axios.delete(`http://localhost:5000/api/reserva/cancel/${reservaId}`, {
+          await axios.delete(`https://backintento.onrender.com/api/reserva/cancel/${reservaId}`, {
             headers: {
-              Authorization: Bearer `${auth.getAccessToken()}`
+              Authorization: `Bearer ${auth.getAccessToken()}`
             }
           });
           Swal.fire(
