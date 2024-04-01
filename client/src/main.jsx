@@ -83,32 +83,32 @@ const router = createBrowserRouter([
   },
 ]);
 
-function App() {
-  const auth = useAuth();
-  const [loading, setLoading] = useState(true);
+// function App() {
+//   const auth = useAuth();
+//   const [loading, setLoading] = useState(true);
 
-  useEffect(() => {
-    const verificarAutenticacion = async () => {
-      try {
-        // Intenta obtener el estado de autenticación del almacenamiento local
-        const isAuthenticated = localStorage.getItem('isAuthenticated');
-        if (isAuthenticated) {
-          // Si el estado de autenticación está presente en el almacenamiento local, actualiza el estado de autenticación
-          auth.setEsAutentico(true);
-        }
-      } catch (error) {
-        console.error("Error al verificar la autenticación:", error);
-      } finally {
-        setLoading(false);
-      }
-    };
+//   useEffect(() => {
+//     const verificarAutenticacion = async () => {
+//       try {
+//         // Intenta obtener el estado de autenticación del almacenamiento local
+//         const isAuthenticated = localStorage.getItem('isAuthenticated');
+//         if (isAuthenticated) {
+//           // Si el estado de autenticación está presente en el almacenamiento local, actualiza el estado de autenticación
+//           auth.setEsAutentico(true);
+//         }
+//       } catch (error) {
+//         console.error("Error al verificar la autenticación:", error);
+//       } finally {
+//         setLoading(false);
+//       }
+//     };
 
-    verificarAutenticacion();
-  }, [auth]);
+//     verificarAutenticacion();
+//   }, [auth]);
 
-  if (loading) {
-    return <div>Cargando...</div>;
-  }
+//   if (loading) {
+//     return <div>Cargando...</div>;
+//   }
 
   return (
     <React.StrictMode>
